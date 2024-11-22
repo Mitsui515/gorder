@@ -1,9 +1,10 @@
 syntax = "proto3";
 package orderpb;
 
-option go_package = "github.com/Mitsui515/gorder/internal/common/genproto/orderpb";
+option go_package = "github.com/Mitsui515/gorder/common/genproto/orderpb";
 
 import "google/protobuf/empty.proto";
+
 service OrderService {
     rpc CreateOrder(CreateOrderRequest) returns (google.protobuf.Empty);
     rpc GetOrder(GetOrderRequest) returns (Order);
