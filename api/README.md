@@ -1,2 +1,3 @@
 # api
-存放接口相关的通讯协议，例如openapi, proto
+
+Store interface-related communication protocols, such as OpenAPI, Proto.
