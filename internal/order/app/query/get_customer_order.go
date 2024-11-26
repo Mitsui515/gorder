@@ -22,7 +22,7 @@ type getCustomerOrderHandler struct {
 func NewGetCustomerOrderHandler(
 	orderRepo domain.Repository,
 	logger *logrus.Entry,
-	metricsClient decorator.MetricsClient,
+	metricClient decorator.MetricsClient,
 ) GetCustomerOrderHandler {
 	if orderRepo == nil {
 		panic("nil orderRepo")
@@ -30,7 +30,7 @@ func NewGetCustomerOrderHandler(
 	return decorator.ApplyQueryDecorators[GetCustomerOrder, *domain.Order](
 		getCustomerOrderHandler{orderRepo: orderRepo},
 		logger,
-		metricsClient,
+		metricClient,
 	)
 }
 
